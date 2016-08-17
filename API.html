@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Nakia's HANG OUT SPOTS</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var davelatlng= {lat:40.756359, lng: -73.988873}
+        var houselatlng= {lat:40.734558, lng:-73.366853 }
+        var myLatLng={lat: 40.734558, lng: -73.366853};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.734558, lng: -73.366853},
+          zoom: 30
+        });
+        var marker= new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title:'Hello WORLD'
+        }); 
+        
+//         var img = new Image();
+//         var div = document.getElementById('houseicon.png');
+
+//         img.onload = function() {
+//         div.appendChild(img);
+//         position: houselatlng, 
+//         map: map,
+
+// };
+
+//         img.src = 'houseicon.png';
+       var newicon="houseicon.png"
+        size: new google.maps.Size(0,0)
+        var housemarker = new google.maps.Marker({
+          position: houselatlng, 
+          map: map,
+          icon: newicon
+          
+      
+      });
+      var daveicon ="daveicon.jpg" 
+        size : new google.maps.Size(0,0)
+        var davemarker= new google.maps.Marker({
+        position: davelatlng,
+        map:map,
+        icon:daveicon
+        
+      });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+    
+  </body>
+
+
+</html>

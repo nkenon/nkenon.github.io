@@ -1,0 +1,13 @@
+adjective1 =input("Tell me an adjective and press enter")
+adjective2=input("Tell me an adjective and press enter")
+Noun1= input("Tell me a noun and press enter")
+Adjective3=input("Tell me an adjective having to do with the body and press enter")
+title="\na_poem\n"
+print(title)
+print("First is the" + adjective1)
+print("Second is the" + adjective2)
+print("Third is the" + Noun1 + 'with the'+ Adjective3 + "chest")
+print("Nakia is the coolest ;)")
+print("Was that a good poem?")
+input("?")
+print("You've hurt my feelings :(")
