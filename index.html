@@ -4,9 +4,41 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <title>Portfolio</title>
 <link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
-<style> 
+
+
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="a.jpg" style="width:100%">
+  <img class="mySlides" src="b.jpg" style="width:100%">
+  <img class="mySlides" src="c.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 header {
 	color: rgba(212,212,212,1.00);
 background-color:rgba(144,144,144,1.00);
