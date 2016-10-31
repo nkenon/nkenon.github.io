@@ -187,7 +187,7 @@ class Scroller(object):
         As the buildings move off the screen a new one is added.
         """
 
-  return
+
 
 time.sleep(150)
 
