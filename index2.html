@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style> 
+    #grad {
+    background: #556270; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#556270, #FF6B6B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#556270, #FF6B6B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#556270, #FF6B6B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#556270, #FF6B6B); /* Standard syntax */
+}
+
+body {
+	cursor: url("http://media.tumblr.com/tumblr_lqs4osv61Z1qfoi4t.png"), default;
+}
+
+#toptitle {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#tophead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#aboutme {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#scratchHead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#scratch {
+	color: white;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#pythonHead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#python {
+	color: white;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+a:link {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:hover {
+	color:none;
+	text-decoration: none;
+}
+
+a:active {
+	color:none;
+	text-decoration: none;
+}
+
+
+
+#hidden {
+	color:transparent;
+}
+
+.button {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	width: auto;
+	border: 2px;
+	border-style: solid;
+	border-color: white;
+	padding: 10px;
+	color: white;
+	background: transparent;
+}
+
+/*.container {
+	padding: 20px;
+}
+.sliderWrap {
+	overflow: hidden;
+	position: relative;
+	top: auto;
+}
+#imageSlider {
+	position: relative;
+	height: auto;
+	list-style: none;
+	overflow: hidden;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+#imageSlider li {
+	position: relative;
+	float: left;
+}
+.navi {
+	position: absolute;
+	top: 120px;
+	height: 50px;
+	width: 30px;
+	opacity: 0.6;
+}
+.navi:hover {
+	opacity: 0.9;
+}
+#prev {
+	background: #000;
+	url("obama1.jpg") no-repeat center;
+	right: 0px;
+}
+#next {
+	background: #000;
+	url("obama2.jpg") no-repeat center;
+	right: 0px;
+}*/
+	</style>
+    <script>
+    window.onload = setTimeout(function() { alert("Welcome to my portfolio!"); },1000);
+
+function hoverBigger() {
+	var hovered = document.getElementById("hovering");
+	hovered.width = 576;
+	hovered.height = 324;
+}
+
+function hoverNorm() {
+	var hoverBye = document.getElementById("hovering");
+	hoverBye.width = 192;
+	hoverBye.height = 108;
+}
+
+function moreabout() {
+	var aboutmethings = document.getElementById("aboutme");
+	aboutmethings.innerHTML = "I'm currently at St. Anthony's Highschool. I have a love of computer science and I also dabble in following international affairs. When I'm not writing essays for debate team, I'm on my computer!."
+}
+
+window.smoothScrollTo = (function () {
+  var timer, start, factor;
+  
+  return function (target, duration) {
+    var offset = window.pageYOffset,
+        delta  = target - window.pageYOffset; // Y-offset difference
+    duration = duration || 1000;              // default 1 sec animation
+    start = Date.now();                       // get start time
+    factor = 0;
+    
+    if( timer ) {
+      clearInterval(timer); // stop any running animations
+    }
+    
+    function step() {
+      var y;
+      factor = (Date.now() - start) / duration; // get interpolation factor
+      if( factor >= 1 ) {
+        clearInterval(timer); // stop animation
+        factor = 1;           // clip to max 1.0
+      } 
+      y = factor * delta + offset;
+      window.scrollBy(0, y - window.pageYOffset);
+    }
+    
+    timer = setInterval(step, 10);
+    return timer;
+  }
+}())
+
+// window.smoothScroll = function(target) {
+// 	var scrollContainer = target;
+// 	do {
+// 		scrollContainer = scrollContainer.parentNode;
+// 		if (!scrollContainer) return;
+// 		scrollContainer.scrollTop += 1;
+// 	}
+// 	while (scrollContainer.scrollTop == 0);;
+
+// 	var targetY = 0;
+// 	do {
+// 		if (target == scrollContainer) break;
+// 		targetY += target.offsetTop;
+// 	}
+// 	while (target = target.offsetParent);
+
+// 	scroll = function(c,a,b,i) {
+// 		i++, if (i > 30) return;
+// 		c.scrollTop = a + (b-a) / 30 * i;
+// 		setTimeOut(function(){scroll(c,a,b,i);}, 20);
+// 	}
+// 	scroll(scrollContainer,scrollContainer.scrollTop, targetY, 0)
+// }// JavaScript Document
+	</script>
+	<link rel="stylesheet" type="text/css" href="styling.css">
+	<link href="CSS-WEB1.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="scripting.js"></script>
+	<title> Laura Goon Portfolio</title>
+
+</head>
+
+<body id="grad">
+
+	<div id="tophead">Nakia Ken<a href="http://img0.liveinternet.ru/images/attach/c/5//3970/3970477_sprite279.swf" target="_blank">o</a>n</div>
+
+	<br>
+	<br>
+
+	<!-- <center><div class="button"><a href="#hidden">Who is she?</a></div></center> -->
+	<center><input class="button" type="button" value="Who is she?" onclick="smoothScrollTo(document.getElementById('hidden').offsetTop)"></center>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="hidden">hi</div>
+	<br>
+	<br>
+	<br>
+
+	<div id="aboutme" onmousedown="moreabout()">I'm currently a senior at St. Anthony's Highschool. Click me!</div>
+
+	<br>
+
+	<!-- <center><div class="button"><a href="#scratching">See some projects</a></div></center> -->
+	<center><input class="button" type="button" value="See some projects" onclick="smoothScrollTo(document.getElementById('scratchHead').offsetTop)"></center>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div id="scratchHead"><a name="scratching">Scratch</a></div>
+	<div id="scratch">
+		<ul>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48538">Scratched</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48539">Shapes and Squares</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48518">Paddle Ball</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48523">Pig</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48511">Jukebox</a></li>
+		</ul>
+	</div>
+
+	<br>
+
+	<!-- <center><div class="button"><a href="#pythoning">See more projects</a></div></center> -->
+	<center><input class="button" type="button" value="See more projects" onclick="smoothScrollTo(document.getElementById('pythonHead').offsetTop)"></center>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div id="pythonHead"> <a name="pythoning">Python</a></div>
+	<div id="python">
+		<ul>
+			<li><a href="madlibs.html">Mad Libs (click me!)</a></li>
+			<li><a href="textadventure.html">Text Adventure (click me!)</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48505">Draw Shapes</a></li>
+			<li><a href="randomgen.py">Random Generator (don't click me ):)</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48501">Documentation Scavenger Hunt</a></li>
+			<li><a href="obamicon.html"><img id="hovering" src="../Python Projects/output.jpg" title="Obamicon" alt="Picture of a duck after python file is run on it. Has a green/brown filter look." height="108" width="192" onmouseover="hoverBigger()" onmouseleave="hoverNorm()"></a>(click the image!)</li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48521">Password Hashing</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48499">Bouncing Ball</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48540">Snow Animation</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48500">City Scroller</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48502">Documentation Scavenger Hunt Pt 2</a></li>
+			<li><a href="https://girlswhocode.instructure.com/courses/706/assignments/48537">Runner Game</a></li>
+		</ul>
+	</div>
+
+	<br>
+
+	<!-- <center><div class="button"><a href="#top">Go back to top</a></div></center> -->
+	<center><input class="button" type="button" value="Go back to top" onclick="smoothScrollTo(document.getElementById('tophead').offsetTop)"></center>
+
+ 	<br>
+	<br>
+	<br>
+
+</body>
+
+</html>

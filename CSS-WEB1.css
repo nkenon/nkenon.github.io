@@ -1,0 +1,174 @@
+#grad {
+    background: #556270; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#556270, #FF6B6B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#556270, #FF6B6B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#556270, #FF6B6B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#556270, #FF6B6B); /* Standard syntax */
+}
+
+body {
+	cursor: url("http://media.tumblr.com/tumblr_lqs4osv61Z1qfoi4t.png"), default;
+}
+
+#toptitle {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#tophead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#aboutme {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#scratchHead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#scratch {
+	color: white;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#pythonHead {
+	color: white;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#python {
+	color: white;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+a:link {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:hover {
+	color:none;
+	text-decoration: none;
+}
+
+a:active {
+	color:none;
+	text-decoration: none;
+}
+
+
+
+#hidden {
+	color:transparent;
+}
+
+.button {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	width: auto;
+	border: 2px;
+	border-style: solid;
+	border-color: white;
+	padding: 10px;
+	color: white;
+	background: transparent;
+}
+
+/*.container {
+	padding: 20px;
+}
+.sliderWrap {
+	overflow: hidden;
+	position: relative;
+	top: auto;
+}
+#imageSlider {
+	position: relative;
+	height: auto;
+	list-style: none;
+	overflow: hidden;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+#imageSlider li {
+	position: relative;
+	float: left;
+}
+.navi {
+	position: absolute;
+	top: 120px;
+	height: 50px;
+	width: 30px;
+	opacity: 0.6;
+}
+.navi:hover {
+	opacity: 0.9;
+}
+#prev {
+	background: #000;
+	url("obama1.jpg") no-repeat center;
+	right: 0px;
+}
+#next {
+	background: #000;
+	url("obama2.jpg") no-repeat center;
+	right: 0px;
+}*/
